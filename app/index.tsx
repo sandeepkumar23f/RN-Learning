@@ -1,11 +1,24 @@
-import { Text, View } from "react-native";
+import { View, Text} from "react-native"
 import "../global.css"
-export default function App() {
-  return (
-    <View className="flex-1 items-center justify-center bg-white">
-      <Text className="text-xl font-bold text-blue-500">
-        Welcome to Nativewind!
-      </Text>
-    </View>
-  );
+type funProp={
+  name: string,
 }
+const Dog = (props: funProp) => {
+  return (
+    <View>
+      <Text className="text-center font-bold text-green-600">how are you {props.name}!</Text>
+    </View>
+  )
+}
+
+const DogFunction = () =>{
+ return(
+   <View >
+    <Text className="text-center">Hello bro!</Text>
+    <Dog name="Alen"/>
+    <Dog name="Bob" />
+  </View>
+ )
+}
+
+export default DogFunction;
