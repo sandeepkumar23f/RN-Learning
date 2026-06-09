@@ -53,8 +53,8 @@ const Cat = (props: CatProps)=>{
 const Cafe = () => {
   return (
     <>
-      <Cat name="desi-bili" />
-      <Cat name="videshi-billi" />
+      <Cat name="tomy" />
+      <Cat name="frak" />
     </>
   );
 };
