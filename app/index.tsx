@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Text, View, Button } from "react-native";
+import { Text, View, Button,Image } from "react-native";
 
 type CatProps = {
   name: string
@@ -45,6 +45,20 @@ const Cat = (props: CatProps)=>{
         Thank you! Malik mera pet bhara hai
         {"\n"}Hungry again in {secondsLeft} seconds
        </Text>
+      }
+
+      {isHungry ? (
+        <Image source={{ uri: 'https://tse3.mm.bing.net/th/id/OIP.Afq8_E_Klz-tqfmp4D7SogHaE7?rs=1&pid=ImgDetMain&o=7&rm=3' }}
+         className="h-52 w-52" 
+         />
+      ) : 
+       <Image
+       source={{
+        uri: 'https://tse2.mm.bing.net/th/id/OIP.UjUIpUUcTimSCFfNvjVBigHaE7?w=500&h=333&rs=1&pid=ImgDetMain&o=7&rm=3'
+       }}
+       className="h-52 w-52"
+        />
+
       }
     </View>
   )
